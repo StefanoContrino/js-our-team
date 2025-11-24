@@ -43,10 +43,10 @@ for (let i = 0; i < teamMembers.length; i++) {
     const teamMember = teamMembers[i];
 
     cardHTML += `<div class="col-12 col-md-6 col-xl-4">
-                    <div class="card mb-3 bg-black" style="max-width: 540px;">
-                        <div class="row g-0">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0 bg-black">
                             <div class="col-12 col-xl-4">
-                            <img class="card-img" src="./img/${teamMember.img}" class="img-fluid rounded-start" alt="${teamMember.name}">
+                            <img class="h-100 card-img" src="./img/${teamMember.img}" class="img-fluid rounded-start" alt="${teamMember.name}">
                             </div>
                             <div class="col-md-8">
                             <div class="card-body text-white">
