@@ -59,7 +59,33 @@ for (let i = 0; i < teamMembers.length; i++) {
                     </div>
                 </div>`
     
-}
+};
+
+document.getElementById("add-card").addEventListener("click", () => {
+    let cardName = prompt("Write the name of the person you want to add");
+    let cardRole = prompt("Write the role of the person you want to add");
+    let cardMail = prompt("Write the mail of the person you want to add");
+
+    cardHTML += `<div class="col-12 col-md-6 col-xl-4">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0 bg-black">
+                            <div class="col-12 col-xl-4">
+                            <img class="h-100 card-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg" class="img-fluid rounded-start" alt="${cardName}">
+                            </div>
+                            <div class="col-md-8">
+                            <div class="card-body text-white">
+                                <h5 class="card-title">${cardName}</h5>
+                                <p class="card-text">${cardRole}</p>
+                                <p class="card-text">${cardMail}</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+
+    const addCardHTML = document.getElementById("row");
+    addCardHTML.innerHTML = cardHTML;
+})
 
 const addCardHTML = document.getElementById("row");
 addCardHTML.innerHTML = cardHTML;
